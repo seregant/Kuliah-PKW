@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>R-Library</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/ong" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/content.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+    <script type="text/javascript" src="js/myScript.js"></script>
+</head>
+<body>
+	<div class="container-fluid" style="background-color: #ffffff">
+		
+        <!--Top navbar-->
+        <div class="row">
+			     <div class="logo">
+				      <a href="index.html">R-Library</a>		
+			     </div>
+			     <div class="topnav" id="myTopnav">
+				      <ul>
+					     <li><a href="#featured" onclick="showFeatured()">Featured</a></li>
+					     <li><a href="#categories" onclick="showCategories()">Categories</a></li>
+					     <li><a href="#info" onclick="showInfo()">Info</a></li>
+                <div class="formbox">
+                        <div id="loginform">
+                            <input type="password" name="pass" placeholder="Password" id="loginput">
+                            <input type="text" name="user" placeholder="Username" id="loginput">
+                        </div>
+                        <div class="loginbox">
+                           <button type="button" class="btn btn-primary btn-sm" onclick="showForm()" name="Lbutton">Login</button>
+                           &nbsp;<a href="register.html"><button id="regLink" type="button" class="btn btn-primary btn-sm">Register</button></a>
+                       </div>
+					             <div class="searchbox">
+                            <input type="text" name="search">
+                       </div>
+				        </div>	
+				      </ul>
+			   </div>			
+		  </div>
+    <!--Sub Menu-->
+      <div class="row" style="background-color: #8f867b;">
+         <div class="col-md-12">
+            <div id="subMenus">
+                <div id="featuredMenu">
+                  <ul>
+                      <li>
+                        <a href="#popular">Buku Populer</a>
+                      </li>
+                      <li>
+                        <a href="new_release.html">New Release</a>
+                      </li>
+                      <li>
+                        <a href="donasi.html">Donasi</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+                </div>
+          </div>
+
+        <div id="subMenus">
+            <div id="categoriesMenu">
+                  <ul>
+                      <li>
+                        <a href="fiksi.html">Fiksi</a>
+                      </li>
+                      <li>
+                        <a href="tutorial.html">Tutorial</a>
+                      </li>
+                      <li>
+                        <a href="learning.html">Learning</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+            </div>
+        </div>
+
+        <div id="subMenus">
+            <div id="infoMenu">
+                  <ul>
+                      <li>
+                        <a href="syarat.html">Syarat dan Ketentuan</a>
+                      </li>
+                      <li>
+                        <a href="about_us.html">Kontak Kami</a>
+                      </li>
+                      <li>
+                        <a href="about_us.html">More Info</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+     </div> 
+		<!--Slider-->
+      <div class="row">
+			<div class="col-md-12" id="slider">
+				<center>
+					<div id="main-slider" class="carousel slide" data-ride="carousel" style="width: 100%">
+				  		<div class="carousel-inner" role="listbox">
+				    		<div class="carousel-item active">
+				      			<img class="d-block img-fluid" src="images/designs.png" alt="First slide" style="max-width: 100%; height: auto;">
+				    		</div>
+				    	  <div class="carousel-item">
+				      			<img class="d-block img-fluid" src="images/business.png" alt="Second slide" style="max-width: 100%; height: auto;">
+				    	</div>
+
+              <div class="carousel-item">
+                    <img class="d-block img-fluid" src="images/children.png" alt="Second slide" style="max-width: 100%; height: auto;">
+              </div>
+				  </div>
+
+				</div>
+				</center>
+			</div>
+		</div>
+
+		<!--BODY-->
+        <div class="row">
+			 <div class="col-md-12" style="background-color: #ffffff;">
+       <a name="popular"></a>
+                <div class="conttitle">
+                    <b style="font-size: 25px">Popular and Available :</b>
+                    <a href="#">More books..</a>
+                </div>
+				<div class="contfeatured">
+                   <table>
+                       <tr>
+                           <td>
+                               <img src="images/book1.jpg">
+                               <div class="bookdetails">
+                                   <div class="booktittle"><h5>To Kill a Mockingbird</h5></div>
+                                   <div class="bookauthor">by Lee, Harper</div>
+                                   <div class="bookresume">
+                                       <p>
+                                           <br>The unforgettable novel of a childhood <br> in a sleepy Southern town and the crisis of conscience
+                                           <br> that rocked it, To Kill A Mockingbird became both an <br>instant bestseller and a critical success when <br>it was first public.. <br>
+                                           <a href="#">Read More</a>
+                                       </p>
+                                   </div>
+                                </div>
+                           </td>
+                           <td>
+                               <img src="images/book2.jpg">
+                               <div class="bookdetails">
+                                   <div class="booktittle"><h5>Mrs. Sherlock Holmes</h5></div>
+                                   <div class="bookauthor">by Rica, Brad</div>
+                                   <div class="bookresume">
+                                       <p>
+                                           <br>Mrs. Sherlock Holmes tells the incredible true life <br> story of Mrs. Grace Humiston, the New <br> York lawyer and detective who solved the <br>famous cold case of Ruth Cruger,<br> an 18-year-old girl who disappeared in..<br> 
+                                           <a href="#">Read More</a>
+                                       </p>
+                                   </div>
+                                </div>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <img src="images/book3.jpg">
+                               <div class="bookdetails">
+                                   <div class="booktittle"><h5>Sherlock Holmes : The <br>Complete Novel and <br>Story Vol.1 </h5></div>
+                                   <div class="bookauthor">by Doyle, Arthur Conan</div>
+                                   <div class="bookresume">
+                                       <p>
+                                           <br>The unforgettable novel of a childhood  in a sleepy Southern town and the crisis of conscience
+                                            that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first public..<br> 
+                                           <a href="#">Read More</a>
+                                       </p>
+                                   </div>
+                                </div>
+                           </td>
+                           <td>
+                               <img src="images/book4.jpg">
+                               <div class="bookdetails">
+                                   <div class="booktittle"><h5>Harry Potter and the Cursed Child</h5></div>
+                                   <div class="bookauthor">by Rowling, J.K</div>
+                                   <div class="bookresume">
+                                       <p>
+                                           <br>Based on an original new story by J.K. Rowling, John Tiffany, and Jack Thorne, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be presen ..<br> 
+                                           <a href="#">Read More</a>
+                                       </p>
+                                   </div>
+                                </div>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <img src="images/book7.jpg">
+                               <div class="bookdetails">
+                                   <div class="booktittle"><h5>The Orphan's Tale</h5></div>
+                                   <div class="bookauthor">by Jenoff, Pam</div>
+                                   <div class="bookresume">
+                                       <p>
+                                           <br>"Readers who enjoyed Kristin Hannah's The Nightingale and Sara Gruen's Water for Elephants will embrace this novel. " --Library Journal"Secrets, lies, treachery, and passion.... I read this novel in a headlong rush." --Christina Baker Klin ..<br> 
+                                           <a href="#">Read More</a>
+                                       </p>
+                                   </div>
+                                </div>
+                           </td>
+                           <td>
+                               <img src="images/book8.jpg">
+                               <div class="bookdetails">
+                                   <div class="booktittle"><h5>The Nightingale</h5></div>
+                                   <div class="bookauthor">by Hannah, Christine</div>
+                                   <div class="bookresume">
+                                       <p>
+                                           <br>The Nightingale. A phenomenon that has enthralled a generation of readers.*Goodreads Best Historical Novel of the Year*People's Choice Favorite Fiction Winner*#1 Indie Next Selection*Buzzfeed Best of the Year*The Wall Street Journal Best of the YearThe Week Best of the Ye ..<br> 
+                                           <a href="#">Read More</a>
+                                       </p>
+                                   </div>
+                                </div>
+                           </td>
+                       </tr>
+                   </table>
+                </div>
+			 </div>
+        </div>
+
+        <!--FOOTER-->
+        <div class="row">
+            <div class="col-md-12" style="background-color: #ffffff;">
+                <hr>
+                <div class="footer">
+                <div class="links">
+                        <b>Informasi</b>
+                        <br>
+                        <li>                                
+                            <a href="pengumuman.html">Pengumuman</a>
+                        </li>
+                        <li>
+                            <a href="pendaftaran.html">Pendaftaran Anggota</a>
+                        </li>
+                        <li>
+                            <a href="booking_info.html">Online Booking</a>
+                        </li>
+                    </div>
+
+                    <div class="links">
+                        <b>Retro International Library</b>
+                        <li>
+                            <a href="about_us.html">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="lowongan.html">Lowongan Pekerjaan</a>
+                        </li>
+                        <li>    
+                            <a href="syarat.html">Syarat dan ketentuan</a>
+                        </li>
+                        <li>    
+                            <a href="http://facebook.com/r-library">Facebook</a>
+                        </li>
+                        <li>    
+                            <a href="http://instagram.com/r-library">Instagram</a>
+                        </li>
+                        <li>    
+                            <a href="http://twitter.com/r-library">Twitter</a>
+                        </li>
+                    </div>
+
+                    <div class="links">
+                        <li>
+                           <b>Kontak Kami</b> 
+                        </li>
+                        <li>
+                            <p>
+                            Kompleks Taman Pintar Kota Yogyakarta
+                            <br><br>
+                            Jalan Panembahan Senopati No. 1-3, Gondomanan, Ngupasan, Gondomanan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55122
+                            <br>(0274)5541234
+                            </p>
+                        </li>
+                    </div>
+                    <h6>In Asociation with</h6>
+                    <a href="http://www.akakom.ac.id" target="blank"><img class="logo-akakom" src="images/akakom_logo.png"></a>
+                    <img class="logo-perpusnas" src="images/logo_perpusnas.png">
+                    <img class="logo-jogja" src="images/logo_jogja.png">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="footer">
+                    <div class="copyr">
+                    2017 &copy; Indra Agus.S, 165410001
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

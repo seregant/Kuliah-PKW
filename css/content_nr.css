@@ -1,0 +1,450 @@
+/* import font */
+@font-face{
+	font-family: bully;
+	src:url(../font/bully.ttf);
+}
+
+/* Container Logo */
+.logo {
+	width: 20%;
+	background-color: #333;
+	float:left;
+	font-family:bully;
+}
+
+.logo a {
+	font-size: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 45px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+/* nav style */
+.topnav {
+	background-color: #007ba7;
+	overflow: hidden;
+	width: 80%;
+	float: left;
+}
+
+.topnav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+.topnav li {
+	float: left;
+}
+
+.topnav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 24px 32px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.topnav li a:hover {
+	background-color: #111;
+}
+
+.formbox {
+	text-align: right;
+	padding: 24px 20px;
+	font-size: 12px;
+	width: 40%;
+	float: right;
+}
+
+.searchbox input{
+	width: 17px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-image: url('../images/search.png');
+    background-size: 17px 17px;
+    background-position: 3px 3px; 
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 25px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.searchbox input:focus {
+	width: 40%;
+}
+
+.loginbox {
+	float: right;
+	padding: 0px 0px 0px 10px;
+	margin-right: 2px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#loginform {
+	display: none;
+}
+
+#loginform input {
+	display: inline;
+	width: 25%;
+	float: right;
+	margin: 2px 0px 2px 3px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* sub menu with js */
+#subMenus {
+	display: inline;
+	background-color: #8f867b;
+	overflow: hidden;
+	width: 40%;
+	float: left;
+	margin-left: 20%;
+}
+
+#subMenus ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #8f867b;
+}
+
+#subMenus li {
+	float: left;
+}
+
+#subMenus li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#subMenus li button {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px 16px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#subMenus li a:hover {
+	color: #1e1f29;
+}
+
+#featuredMenu {
+	display: none;
+	float: left;
+}
+
+#categoriesMenu {
+	display: none;
+	float: left;
+}
+
+#infoMenu {
+	display: none;
+	float: left;
+}
+
+/* filter style */
+
+.filterhider {
+	width: 80%;
+	background-color:#4c76e1;
+	margin: 40px 10% 0px 10%;
+	float: left;
+}
+
+.filtertext {
+	padding: 5px 0px 5px 10px;
+	font-size: 15px;
+	font-style: bold;
+	color: #fff;
+	float: left;
+}
+
+#up a {
+	display: none;
+	float:right;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 10px 5px 0px;
+}
+
+#down a {
+	display: inline;
+	float:right;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 10px 5px 0px;
+}
+
+#filterbox {
+	width: 80%;
+	background-color:#4c76e1;
+	margin: 40px 10% 0px 10%;
+	margin-top: 4px;
+	float: left;
+	display: none;
+}
+
+
+#filterbox th {
+	font-size: 15px;
+	color: #fff;
+}
+
+#filterbox td {
+	font-size: 12px;
+	color: #fff;
+}
+
+.options {
+	width: 50%;
+	float: left;
+}
+
+#filterbox table {
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+#filterbox ul {
+	list-style-type: none;
+}
+
+.filtersub {
+	float: left;
+	width: 100%;
+}
+
+.filtersub button {
+	float: right;
+	margin: 10px 10px  10px 0px;
+}
+
+.filtersub a {
+	float: right;
+	font-size: 12px;
+	color: #fff;
+	margin: 15px 10px 10px 0px;
+}
+
+/* book list */
+
+.titleline {
+	width: 80%;
+	margin: 10px 10% 0px 10%;
+	float: left;
+}
+
+
+.left-text {
+	font-size: 12px;
+	float: left;
+}
+
+.right-text {
+	float: right;
+	margin: 10px 10px;
+	font-size: 12px;
+	display: inline;
+	
+}
+
+.right-text p {
+	float: right;
+	margin: 16px 10px;
+}
+
+.select-text {
+	border: 1px solid #ccc;
+    width: 100px;
+    border-radius: 3px;
+    overflow: hidden;
+    float:right;
+    margin-top: 10px;
+}
+
+
+.select-text select {
+	padding: 5px 4px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 13px;
+    background: #fafafa url("../images/arrow.png") no-repeat 70% 45%;
+    background-size: 30%;
+}
+
+.left-text-bot {
+	font-size: 12px;
+	float: left;
+	margin-top: 7px ;
+	color: #4c76e1;
+}
+
+.right-text-bot {
+	float: right;
+	margin: 0px 10px;
+	font-size: 12px;
+	display: inline;
+	
+}
+
+.right-text-bot p {
+	float: right;
+	margin: 7px 10px;
+}
+
+.select-text-bot {
+	border: 1px solid #ccc;
+    width: 100px;
+    border-radius: 3px;
+    overflow: hidden;
+    float:right;
+}
+
+
+.select-text-bot select {
+	padding: 5px 4px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 13px;
+    background: #fafafa url("../images/arrow.png") no-repeat 70% 45%;
+    background-size: 30%;
+}
+
+
+.booklist {
+	width: 80%;
+	margin: 0px 10% 0px 10%;
+	float: left;
+}
+
+.book-cover {
+	width: 20%;
+	float: left;
+}
+
+.book-details {
+	width: 60%;
+	float: left;
+	font-size: 13px;
+}
+
+.book-details p {
+	margin-right: 10px;
+}
+
+.book-actions {
+	width: 18%;
+	background-color: #fff;
+	float: left;
+	margin-left: 2%;
+}
+
+.book-actions span {
+	font-size: 13px;
+	color: #bbc6ce;
+}
+
+.pagination {
+	color: #333;
+	font-size: 13px;
+	float: left;
+	width: 80%;
+	margin: 5px 10% 0px 10%;
+
+}
+
+/* Divider line */
+
+hr {
+	border-top: 1px solid #8c8b8b;
+	opacity: 0.5;
+}
+
+.divider {
+	width: 100%;
+	float: left;
+}
+
+/* footer */
+
+.footer {
+	margin: 10px 80px 10px 80px;
+}
+
+.footer .logo-akakom {
+	max-width: 5%;
+	height: auto;
+	float: right;
+	margin:10px 20px;
+}
+
+.footer .logo-perpusnas {
+	max-width: 15%;
+	float: right;
+	margin:10px 20px;
+}
+
+.footer .logo-jogja {
+	max-width: 5%;
+	float: right;
+	margin:3px 20px;
+}
+
+.footer h6 {
+	width: 100%;
+	text-align: right;
+}
+
+.footer .links {
+	margin-top: 30px;
+	margin-right: 60px;
+	float: left;
+	max-width: 20%;
+}
+
+.footer	.links li {
+	list-style: none;
+}
+
+.footer .links a {
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.footer .links p {
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.copyr {
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 20px;
+}

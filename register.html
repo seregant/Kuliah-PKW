@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R-Library - Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ong" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/content.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>  
+    <script type="text/javascript" src="js/myScript.js"></script>
+</head>
+<body>
+  <div class="container-fluid" style="background-color: #ffffff">
+    
+        <!--Top navbar-->
+        <div class="row">
+           <div class="logo">
+              <a href="index.html">R-Library</a>    
+           </div>
+           <div class="topnav" id="myTopnav">
+              <ul>
+               <li><a href="#featured" onclick="showFeatured()">Featured</a></li>
+               <li><a href="#categories" onclick="showCategories()">Categories</a></li>
+               <li><a href="#info" onclick="showInfo()">Info</a></li>
+                <div class="formbox">
+                        <div id="loginform">
+                            <input type="password" name="pass" placeholder="Password" id="loginput">
+                            <input type="text" name="user" placeholder="Username" id="loginput">
+                        </div>
+                        <div class="loginbox">
+                           <button type="button" class="btn btn-primary btn-sm" onclick="showForm()" name="Lbutton">Login</button>
+                           &nbsp;<a href="register.html"><button id="regLink" type="button" class="btn btn-primary btn-sm">Register</button></a>
+                       </div>
+                       <div class="searchbox">
+                            <input type="text" name="search">
+                       </div>
+                </div>  
+              </ul>
+         </div>     
+      </div>
+    <!--Sub Menu-->
+      <div class="row" style="background-color: #8f867b;">
+         <div class="col-md-12">
+            <div id="subMenus">
+                <div id="featuredMenu">
+                  <ul>
+                      <li>
+                        <a href="#popular">Buku Populer</a>
+                      </li>
+                      <li>
+                        <a href="new_release.html">New Release</a>
+                      </li>
+                      <li>
+                        <a href="donasi.html">Donasi</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+                </div>
+          </div>
+
+        <div id="subMenus">
+            <div id="categoriesMenu">
+                  <ul>
+                      <li>
+                        <a href="fiksi.html">Fiksi</a>
+                      </li>
+                      <li>
+                        <a href="tutorial.html">Tutorial</a>
+                      </li>
+                      <li>
+                        <a href="learning.html">Learning</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+            </div>
+        </div>
+
+        <div id="subMenus">
+            <div id="infoMenu">
+                  <ul>
+                      <li>
+                        <a href="syarat.html">Syarat dan Ketentuan</a>
+                      </li>
+                      <li>
+                        <a href="about_us.html">Kontak Kami</a>
+                      </li>
+                      <li>
+                        <a href="about_us.html">More Info</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+     </div> 
+
+      <!--Content--> 
+
+      <div class="row">
+        <div class="col-md-12">
+        <div class="reg-form">
+          <center>
+          <form name="registrasi" onsubmit="return regValidation()" action="index.html" method="get">
+          <table width="70%">
+            <tr>
+              <th colspan="3"><center>Registrasi Anggota</center></th>
+            </tr>
+            <tr>
+              <td>Nama</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+              <td>Alamat</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td><input type="text" name="alamat"></td>
+            </tr>
+            <tr>
+              <td>Tangal Lahir</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td><input type="date" name="tanggal-lahir"></td>
+            </tr>
+            <tr>
+              <td>E-Mail</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td><input type="text" name="mail"></td>
+            </tr>
+            <tr>
+              <td>Password</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+              <td>Ulangi password</td>
+              <td>&nbsp;:&nbsp;</td>
+              <td><input type="password" name="retype-pass"></td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <center>
+                  <button type="reset" class="btn btn-sm btn-primary">Reset</button>
+                  <button type="submit" class="btn btn-sm btn-primary">Register</button>
+                </center>
+              </td>
+            </tr>
+          </table>
+        </form>
+        </center>
+        </div>
+        </div>
+    </div>
+        <!--FOOTER-->
+        <div class="row">
+            <div class="col-md-12" style="background-color: #ffffff;">
+              <hr>
+                <div class="footer">
+                <div class="links">
+                        <b>Informasi</b>
+                        <br>
+                        <li>                                
+                            <a href="pengumuman.html">Pengumuman</a>
+                        </li>
+                        <li>
+                            <a href="pendaftaran.html">Pendaftaran Anggota</a>
+                        </li>
+                        <li>
+                            <a href="booking_info.html">Online Booking</a>
+                        </li>
+                    </div>
+
+                    <div class="links">
+                        <b>Retro International Library</b>
+                        <li>
+                            <a href="about_us.html">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="lowongan.html">Lowongan Pekerjaan</a>
+                        </li>
+                        <li>    
+                            <a href="syarat.html">Syarat dan ketentuan</a>
+                        </li>
+                        <li>    
+                            <a href="http://facebook.com/r-library">Facebook</a>
+                        </li>
+                        <li>    
+                            <a href="http://instagram.com/r-library">Instagram</a>
+                        </li>
+                        <li>    
+                            <a href="http://twitter.com/r-library">Twitter</a>
+                        </li>
+                    </div>
+                    <div class="links">
+                        <li>
+                           <b>Kontak Kami</b> 
+                        </li>
+                        <li>
+                            <p>
+                            Kompleks Taman Pintar Kota Yogyakarta
+                            <br><br>
+                            Jalan Panembahan Senopati No. 1-3, Gondomanan, Ngupasan, Gondomanan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55122
+                            <br>(0274)5541234
+                            </p>
+                        </li>
+                    </div>
+                    <h6>In Asociation with</h6>
+                    <a href="http://www.akakom.ac.id" target="blank"><img class="logo-akakom" src="images/akakom_logo.png"></a>
+                    <img class="logo-perpusnas" src="images/logo_perpusnas.png">
+                    <img class="logo-jogja" src="images/logo_jogja.png">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="footer">
+                    <div class="copyr">
+                    2017 &copy; Indra Agus.S, 165410001
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</body>
+</html>

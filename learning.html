@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>R-Library - Learning</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/ong" href="images/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/content_nr.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+    <script type="text/javascript" src="js/myScript.js"></script>
+</head>
+<body>
+	<div class="container-fluid" style="background-color: #ffffff">
+		
+        <!--Top navbar-->
+        <div class="row">
+			     <div class="logo">
+				      <a href="index.html">R-Library</a>		
+			     </div>
+			     <div class="topnav" id="myTopnav">
+				      <ul>
+					     <li><a href="#featured" onclick="showFeatured()">Featured</a></li>
+					     <li><a href="#categories" onclick="showCategories()">Categories</a></li>
+					     <li><a href="#info" onclick="showInfo()">Info</a></li>
+                <div class="formbox">
+                        <div id="loginform">
+                            <input type="password" name="pass" placeholder="Password" id="loginput">
+                            <input type="text" name="user" placeholder="Username" id="loginput">
+                        </div>
+                        <div class="loginbox">
+                           <button type="button" class="btn btn-primary btn-sm" onclick="showForm()" name="Lbutton">Login</button>
+                           &nbsp;<a href="register.html"><button id="regLink" type="button" class="btn btn-primary btn-sm">Register</button></a>
+                       </div>
+					             <div class="searchbox">
+                            <input type="text" name="search">
+                       </div>
+				        </div>	
+				      </ul>
+			   </div>			
+		  </div>
+    <!--Sub Menu-->
+      <div class="row" style="background-color: #8f867b;">
+         <div class="col-md-12">
+            <div id="subMenus">
+                <div id="featuredMenu">
+                  <ul>
+                      <li>
+                        <a href="#popular">Buku Populer</a>
+                      </li>
+                      <li>
+                        <a href="new_release.html">New Release</a>
+                      </li>
+                      <li>
+                        <a href="donasi.html">Donasi</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+                </div>
+          </div>
+
+        <div id="subMenus">
+            <div id="categoriesMenu">
+                  <ul>
+                      <li>
+                        <a href="fiksi.html">Fiksi</a>
+                      </li>
+                      <li>
+                        <a href="tutorial.html">Tutorial</a>
+                      </li>
+                      <li>
+                        <a href="learning.html">Learning</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+            </div>
+        </div>
+
+        <div id="subMenus">
+            <div id="infoMenu">
+                  <ul>
+                      <li>
+                        <a href="syarat.html">Syarat dan Ketentuan</a>
+                      </li>
+                      <li>
+                        <a href="about_us.html">Kontak Kami</a>
+                      </li>
+                      <li>
+                        <a href="about_us.html">More Info</a>
+                      </li>
+                      <li>
+                        <button type="button" class="close" aria-label="Close" onclick="collapseAll()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </li>
+                  </ul>
+            </div>
+        </div>
+      </div>
+     </div> 
+
+      <!--Content--> 
+
+      <div class="row">
+        <div class="col-md-12">
+            <div class="filterhider" onclick="showFilter()">
+              <div class="filtertext">
+                <b>SEARCH FILTER</b>
+              </div>
+              <div id="down">
+                <a href="#showFilter" ><span>&#9776;</span></a>
+              </div>
+            </div>
+
+            <div id="filterbox">
+              <form id="filterForm">
+                <div class="options">
+                  <table>
+                      <tr>
+                        <th>
+                          <b>CATEGORY</b>
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="all"> All
+                        </td>
+                        <td>
+                          <input type="checkbox" name="learning"> Learning
+                        </td>
+                      </tr>
+                    </table>
+                </div>
+
+                <div class="options">
+                  <table width="100%">
+                      <tr>
+                        <th width="50%">
+                          STATUS STOCK
+                        </th>
+                        <th>
+                          TAHUN RELEASE
+                        </th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" name="tersedia">Tersedia<br>
+                          <input type="checkbox" name="booked">Booked<br>
+                          <input type="checkbox" name="dipinjam">Dipinjam
+                        </td>
+                        <td>
+                          <input type="text" name="start_year" style="width: 40px;">&nbsp; s/d &nbsp;<input type="text" name="end_year" style="width: 40px;"> 
+                        </td>
+                      </tr>
+                    </table>
+                </div>
+              </form>
+
+              <div class="filtersub">
+                <button type="submit" class="btn btn-secondary btn-sm" name="Lbutton">Filter</button>
+                <a href="#resField" onclick="resetFilter()">Reset Field</a>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titleline">
+            <hr>
+          <div class="left-text">
+            <h4>Learning</h4>
+            <p>Menampilkan 1-10 dari 100 hasil</p>
+          </div>
+
+         <div class="right-text">
+            <div class="select-text">
+            <select name="sort">
+              <option value="terbaru">Terbaru</option>
+              <option value="populer">Populer</option>
+              <option value="jumlah">Stok</option>
+              <option value="Judul">Judul</option>
+            </select>
+          </div>
+          <p><b>Urutkan berdasarkan</b></p>
+         </div>
+         <div class="divider">
+           <hr>
+         </div>
+        </div>
+        <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="booklist">
+          <div class="book-cover">
+            <img src="images/book10.jpg" width="70%" height="auto">
+          </div>
+
+          <div class="book-details">
+          <h3>The Fundamental 5: The Formula for Quality Instruction</h3>
+          by The Writter
+          <br>
+          <br>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p> <a href="book.html">Read more..</a>
+
+          </div>
+          <div class="book-actions">
+          <b>Stok : Tersedia</b><br>
+          <span>Pengembalian tercepat : -</span>
+          <br>
+         <hr>
+          <a href="book.html"><button class="btn btn-primary">Book Now</button></a>
+ 
+          </div>
+          <div class="divider">
+           <hr>
+         </div>
+      </div>
+      <div class="titleline">
+          <div class="left-text-bot">
+              <a href="">First</a>&nbsp;&nbsp;
+              <a href="">Prev</a>&nbsp;
+              <a href="">1</a>&nbsp;
+              <a href="">2</a>&nbsp;
+              <a href="">3</a>&nbsp;
+              <a href="">4</a>&nbsp;
+              <a href="">5</a>
+              ....&nbsp;&nbsp;
+              <a href="">Next</a>&nbsp;&nbsp;
+              <a href="">Last</a>
+          </div>
+
+         <div class="right-text-bot">
+            <div class="select-text-bot">
+            <select name="sort">
+              <option value="terbaru">Terbaru</option>
+              <option value="populer">Populer</option>
+              <option value="jumlah">Stok</option>
+              <option value="Judul">Judul</option>
+            </select>
+          </div>
+          <p><b>Urutkan berdasarkan</b></p>
+         </div>
+        </div>
+    </div>
+        <!--FOOTER-->
+        <div class="row">
+            <div class="col-md-12" style="background-color: #ffffff;">
+              <hr>
+                <div class="footer">
+                <div class="links">
+                        <b>Informasi</b>
+                        <br>
+                        <li>                                
+                            <a href="pengumuman.html">Pengumuman</a>
+                        </li>
+                        <li>
+                            <a href="pendaftaran.html">Pendaftaran Anggota</a>
+                        </li>
+                        <li>
+                            <a href="booking_info.html">Online Booking</a>
+                        </li>
+                    </div>
+
+                    <div class="links">
+                        <b>Retro International Library</b>
+                        <li>
+                            <a href="about_us.html">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="lowongan.html">Lowongan Pekerjaan</a>
+                        </li>
+                        <li>    
+                            <a href="syarat.html">Syarat dan ketentuan</a>
+                        </li>
+                        <li>    
+                            <a href="http://facebook.com/r-library">Facebook</a>
+                        </li>
+                        <li>    
+                            <a href="http://instagram.com/r-library">Instagram</a>
+                        </li>
+                        <li>    
+                            <a href="http://twitter.com/r-library">Twitter</a>
+                        </li>
+                    </div>
+                    <div class="links">
+                        <li>
+                           <b>Kontak Kami</b> 
+                        </li>
+                        <li>
+                            <p>
+                            Kompleks Taman Pintar Kota Yogyakarta
+                            <br><br>
+                            Jalan Panembahan Senopati No. 1-3, Gondomanan, Ngupasan, Gondomanan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55122
+                            <br>(0274)5541234
+                            </p>
+                        </li>
+                    </div>
+                    <h6>In Asociation with</h6>
+                    <a href="http://www.akakom.ac.id" target="blank"><img class="logo-akakom" src="images/akakom_logo.png"></a>
+                    <img class="logo-perpusnas" src="images/logo_perpusnas.png">
+                    <img class="logo-jogja" src="images/logo_jogja.png">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="footer">
+                    <div class="copyr">
+                    2017 &copy; Indra Agus.S, 165410001
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>

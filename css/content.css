@@ -1,0 +1,371 @@
+/* import font */
+@font-face{
+	font-family: bully;
+	src:url(../font/bully.ttf);
+}
+
+/* Container Logo */
+.logo {
+	width: 20%;
+	background-color: #333;
+	float:left;
+	font-family:bully;
+}
+
+.logo a {
+	font-size: 50px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 45px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+/* nav style */
+.topnav {
+	background-color: #007ba7;
+	overflow: hidden;
+	width: 80%;
+	float: left;
+}
+
+.topnav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+.topnav li {
+	float: left;
+}
+
+.topnav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 24px 32px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.topnav li a:hover {
+	background-color: #111;
+}
+
+.formbox {
+	text-align: right;
+	padding: 24px 20px;
+	font-size: 12px;
+	width: 40%;
+	float: right;
+}
+
+.searchbox input{
+	width: 17px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-image: url('../images/search.png');
+    background-size: 17px 17px;
+    background-position: 3px 3px; 
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 25px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.searchbox input:focus {
+	width: 40%;
+}
+
+.loginbox {
+	float: right;
+	padding: 0px 0px 0px 10px;
+	margin-right: 2px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#loginform {
+	display: none;
+}
+
+#loginform input {
+	display: inline;
+	width: 25%;
+	float: right;
+	margin: 2px 0px 2px 3px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* sub menu with js */
+#subMenus {
+	display: inline;
+	background-color: #8f867b;
+	overflow: hidden;
+	width: 40%;
+	float: left;
+	margin-left: 20%;
+}
+
+#subMenus ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #8f867b;
+}
+
+#subMenus li {
+	float: left;
+}
+
+#subMenus li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 12px 16px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#subMenus li button {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px 16px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#subMenus li a:hover {
+	color: #1e1f29;
+}
+
+#featuredMenu {
+	display: none;
+	float: left;
+}
+
+#categoriesMenu {
+	display: none;
+	float: left;
+}
+
+#infoMenu {
+	display: none;
+	float: left;
+}
+
+#slider {
+	background-image: url(../images/slider-back.png);
+	background-repeat: no-repeat;
+	background-color: #ff8000;
+}
+
+/* home contnt */
+.conttitle {
+	margin: 20px 80px 10px 80px;
+}
+
+.conttitle a {
+	float: right;
+	margin-top: 15px;
+	color: #000;
+}
+
+.contfeatured {
+	border:1px solid #90a987;
+	margin: 20px 80px 100px 80px;
+	border-bottom-style: 1px solid #90a987;
+}
+
+.contfeatured table {
+	margin: 20px 20px;
+	width: 100%;
+
+}
+
+.contfeatured table td {
+	width: 50%;
+	
+}
+
+.contfeatured img {
+	max-width: 20%;
+	height: auto;
+	float: left;
+	margin: 0px 0px 0px 0px;
+	margin-top: 10px;
+
+}
+
+.bookdetails {
+	padding: 0px 0px 0px 20px;
+	float: left;
+	width: 60%;
+	margin-top: 10px;
+}
+
+.booktittle {
+ 
+}
+
+.bookauthor {
+	font-size: 15px;
+}
+
+.bookresume {
+	float: left;
+	font-size: 12px
+}
+
+.book-display {
+	width: 80%;
+	margin: 20px 10% 0% 10%;
+	float: right;
+}
+
+.bd-image {
+	float: left;
+	width: 25%;
+}
+
+.bd-details {
+	float: left;
+	width: 73%;
+	font-size: 15px;
+	margin-left: 2%;
+}
+
+.actions {
+	float: right;
+	font-size: 13px;
+}
+
+.actions p {
+	text-align: right;
+}
+
+.bd-details input {
+	box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.textbox {
+	margin-top: 30px;
+	width: 95%;
+	margin-left: 2%;
+	margin-right: 2%;
+	font-size: 15px;
+}
+
+.infolist {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.infolist li {
+	list-style-type: none;
+	font-size: 14px;
+}
+
+.infolist a {
+	text-decoration: none;
+}
+
+.infolist .active {
+	color: #333;
+	font-weight: bold;
+}
+
+.infotitle {
+	margin: 30px 0px 0px 2%;
+}
+
+.reg-form {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 30px;
+}
+
+.reg-form input {
+	box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.reg-form button {
+	margin-top: 10px;
+}
+/* footer */
+
+.footer {
+	margin: 10px 80px 10px 80px;
+}
+
+.footer hr {
+	border-top: 1px solid #8c8b8b;
+	opacity: 0.5;
+	float: right;
+}
+.footer .logo-akakom {
+	max-width: 5%;
+	height: auto;
+	float: right;
+	margin:10px 20px;
+}
+
+.footer .logo-perpusnas {
+	max-width: 15%;
+	float: right;
+	margin:10px 20px;
+}
+
+.footer .logo-jogja {
+	max-width: 5%;
+	float: right;
+	margin:3px 20px;
+}
+
+.footer h6 {
+	width: 100%;
+	text-align: right;
+}
+
+.footer .links {
+	margin-top: 30px;
+	margin-right: 60px;
+	float: left;
+	max-width: 20%;
+}
+
+.footer	.links li {
+	list-style: none;
+}
+
+.footer .links a {
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.footer .links p {
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.copyr {
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 20px;
+}
